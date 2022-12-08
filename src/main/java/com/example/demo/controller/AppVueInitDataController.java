@@ -40,44 +40,21 @@ public class AppVueInitDataController {
         return data;
     }
 
-//    public static void main(String[] args) {
-//        printPyramid(5);
-//    }
 
-//    public static void printPyramid(int n){
-//        if(n < 1) {
-//            System.out.println("n要大於0");
-//        }
-//
-//        int x = 0;
-//        for(int i = 0; i < n ; i++) {       // 第一層迴圈負責印斷行(\n)
-//            for(int k = (n-1); k > i; k--) {  // 第二層迴圈負責印空白( )
-//                System.out.print(" ");
-//            }
-//            for(int j = 0; j <= x; j++) {     // 第二層迴圈負責印星號(*)
-//                System.out.print("*");
-//            }
-//            System.out.print("\n");
-//            x+=2;
-//        }
-//
-//    }
 
 
     public static void main(String[] args) throws Exception {
-
         // 建立HttpClient實例
         HttpClient httpClient = HttpClient.newBuilder()
                 .version(HttpClient.Version.HTTP_1_1) // http 1.1
                 .connectTimeout(Duration.ofSeconds(5)) // timeout after 5 seconds
                 .sslContext(disabledSSLContext()) // disable SSL verify
                 .build();
-
         // 臺灣證券交易所0056個股日成交資訊API
-//        String url = "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20211105&stockNo=0056";
+        //        String url = "https://www.twse.com.tw/exchangeReport/STOCK_DAY?response=json&date=20211105&stockNo=0056";
         String url = "https://www.twse.com.tw/exchangeReport/STOCK_DAY_ALL";
 
-///Announcement/BFZFZU_T
+        ///Announcement/BFZFZU_T
         // 建立HttpRequest請求
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(url))

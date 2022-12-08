@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/test")
 @PreAuthorize("hasRole('ADMIN')")
-public class TestController {
+public class TestUserController {
     //不透過認證前要做的事情@PreAuthorize 就不用登入就可以打入api  其他有加@PreAuthorize才能打入API
     @GetMapping("/all")
 //	@PreAuthorize("hasRole('ADMIN')")
