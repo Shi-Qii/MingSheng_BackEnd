@@ -23,7 +23,10 @@ import org.springframework.web.multipart.MultipartFile;
 //@PreAuthorize("hasRole('ADMIN')")
 public class UploadResource {
 
-
+    @GetMapping("/api/auth/helloWord")
+    public String hello123() {
+        return "hell OK";
+    }
 
     //上傳圖片
     //C:\Users\User\Desktop\Spring_Vue\src\main\resources\static
